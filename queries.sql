@@ -70,5 +70,5 @@ SELECT animals.name, escape_attempts FROM animals JOIN owners on animals.owner_i
 /*Who owns the most animals?*/
 SELECT *
 FROM (SELECT full_name as winner, COUNT(animals.name) as pets 
-FROM animals JOIN owners on animals.owner_id = owners.id 
-GROUP BY full_name ORDER BY pets DESC) as T LIMIT 1;
+FROM Animals JOIN owners on Animals.owner_id = owners.id 
+GROUP BY full_name ORDER BY pets DESC) as T SELECT TOP 1;
